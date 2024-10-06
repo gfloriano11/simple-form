@@ -1,0 +1,11 @@
+CREATE DATABASE formulario;
+
+USE formulario;
+
+CREATE TABLE usuario(
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    numero CHAR(11) NOT NULL,
+    problema TEXT NOT NULL
+);
