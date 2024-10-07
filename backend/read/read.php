@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/global.css">
+    <link rel="stylesheet" href="../../style/read.css">
     <title>Pedidos</title>
 </head>
 <body>
@@ -25,19 +26,18 @@
                     $resultado = $conn -> query($query);
 
                     if($row = $resultado -> num_rows > 0){ // se a linha tem algum resultado ?>
-                        <table border="1">
+                        <table id="tabela_usuario">
                             <tr>
                                 <th>Nome Completo:</th>
                                 <th>Email:</th>
                                 <th>Número:</th>
-                                <th>Problema:</th> 
+                                <th>Ações</th>
                             </tr>
                 <?php   while($row = $resultado -> fetch_assoc()){ ?>
                         <tr>
                             <td><?php echo $row['nome'];?></td>
                             <td><?php echo $row['email'];?></td>
                             <td><?php echo $row['numero'];?></td>
-                            <td><?php echo $row['problema']; // fazer ações para visualizar pedido, editar e excluir. ?></td>
                         </tr>
                 <?php   }
                     } else {

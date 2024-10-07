@@ -1,0 +1,14 @@
+@media(max-width:767px){
+    #textos ,#tabela_usuario{
+        max-width: 100%;
+        width: 100%;
+
+        & th{
+            font-size: 14px;
+        }
+
+        & td{
+            font-size: 10px;
+        }
+    }
+}
