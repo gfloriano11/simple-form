@@ -15,6 +15,8 @@
         } else {
             echo "Erro: " . $sql . "<br>" . $conn->error;
         }
+        header("Location: ../../index.html");
+        exit();
     }
 
 ?>
