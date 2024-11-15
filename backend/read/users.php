@@ -1,17 +1,3 @@
-<?php
-
-    include "../database/db.php";
-                                
-    $id = $_GET['id'];
-
-    $resultado = $conn->query("SELECT * FROM usuario WHERE id = '$id'");
-
-    $row = $resultado->fetch_assoc();
-
-    $nome = $row['nome'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
@@ -28,7 +14,7 @@
                 <div id="textos">
                     <div id="div_texto_principal">
                         <div id="tamanho_texto_principal">
-                            <p id="texto_principal">Problema de <?php echo $nome . ':';?></p>
+                            <p id="texto_principal">Olá, Administrador. Esses são os Pedidos Pendentes:</p>
                         </div>
                     </div>
                     <!-- PHP aberto dentro da div "textos", centralizada no design -->
@@ -36,7 +22,7 @@
 
                     include '../database/db.php';
 
-                    $query = "SELECT * FROM usuario WHERE id = '$id'";
+                    $query = "SELECT * FROM usuario";
 
                     $resultado = $conn->query($query);
 
@@ -44,15 +30,15 @@
                         <div class="container_tabela">
                             <table id="tabela_usuario">
                                 <tr>
-                                    <th>Nome Completo:</th>
+                                    <th class="th_claro">Nome Completo:</th>
                                     <th>Email:</th>
-                                    <th>Ver Mais:</th>
+                                    <th class="th_claro">Ver Mais:</th>
                                 </tr>
                                 <?php while ($row = $resultado->fetch_assoc()) { ?>
                                     <tr>
-                                        <td><?php echo $row['nome']; ?></td>
+                                        <td class="td_claro"><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['email']; ?></td>
-                                        <td><?php echo $row['problema']; ?></a></td>
+                                        <td class="td_claro"><a href="/projetos/simple-form/backend/read/user-problem.php?id=<?php echo $row['id'] ?>">Ver</a></td>
                                     </tr>
                         </div>
                             <?php }
