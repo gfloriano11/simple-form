@@ -29,20 +29,25 @@
                     if ($row = $resultado->num_rows > 0) { // se a linha tem algum resultado ?>
                         <div class="container_tabela">
                             <table id="tabela_usuario">
-                                <tr>
-                                    <th class="th_claro">Nome Completo:</th>
-                                    <th>Email:</th>
-                                    <th class="th_claro">Ver Mais:</th>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>Nome Completo:</th>
+                                        <th>Email:</th>
+                                        <th>Ver Mais:</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
                                 <?php while ($row = $resultado->fetch_assoc()) { ?>
                                     <tr>
-                                        <td class="td_claro"><?php echo $row['nome']; ?></td>
+                                        <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['email']; ?></td>
-                                        <td class="td_claro"><a href="/projetos/simple-form/backend/read/user-problem.php?id=<?php echo $row['id'] ?>">Ver</a></td>
+                                        <td><a href="/projetos/simple-form/backend/read/user-problem.php?id=<?php echo $row['id'] ?>">Ver</a></td>
                                     </tr>
+                                <?php } ?>
+                                </tbody>
+                            </table>
                         </div>
-                            <?php }
-                    } else {
+<?php                 } else {
                         echo 'Não há Problemas Pendentes';
                     }
                     $conn->close();

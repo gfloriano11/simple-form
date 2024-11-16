@@ -1,4 +1,3 @@
-@media(max-width:767px){
 
     .container_tabela{
         display: flex;
@@ -6,40 +5,42 @@
     }
 
     #tabela_usuario{
+        border-collapse: collapse; 
         max-width: 300px;
         width: 100%;
         border-radius: 20px;
-        overflow: hidden;
-        border: 1.5px solid rgb(51, 51, 51);
         margin-bottom: 20px;
-        border-spacing: 0px;
+        padding: 0;
+        border: 1px solid rgb(78, 78, 78);
+        overflow: hidden;
 
 
         & th{
             font-size: 16px;
             padding: 10px 10px 10px 10px;
-            border-width: 1px;
-            border-color: rgb(51, 51, 51);
-            border-style: solid;
+
         }
 
         & td{
             font-size: 16px;
             padding: 15px 5px 15px 5px;
-            border-width: 1px;
-            border-color: rgb(51, 51, 51);
-            border-style: solid;
+
 
         }
 
-        tr{
-            border-spacing: 0px;
-            border-collapse: collapse;
-            
-        }
 
-        tr:nth-child(even) {
-            background-color: #dfdfdf;
-        }
     }
-}
+
+    thead tr{
+        color: white;
+        background-color: rgb(32, 32, 32);
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #b6b6b6;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #cfcfcf;
+    }
+    

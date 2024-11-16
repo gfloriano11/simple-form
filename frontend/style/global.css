@@ -9,7 +9,6 @@ body{
     background-color: rgb(244, 244, 244);
 }
 
-@media(max-width:767px){
     #texto_invisivel{
         color: rgb(244, 244, 244);
     }
@@ -32,6 +31,7 @@ body{
         border-width: 1px;
         border-style: solid;
         background-color: #e9e9e9;
+        max-width: 500px;
         width: 100%;
         height: auto;
         box-shadow: 0 0 10px rgb(181, 181, 181);
@@ -58,6 +58,7 @@ body{
         margin: 0;
     }
     #forms{
+        margin-top: 25px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -72,22 +73,24 @@ body{
         width: 100%;
         text-align: center;
     }
-    .campos{
+    .campos_menores{
+        display: flex;
+        max-width: 220px;
         width: 100%;
-
-        & #campo_nome{
-            margin-right: 33%;
-        }
-        & #campo_email{
-            margin-right: 53%;
-        }
-        & #campo_numero{
-            margin-right: 50%;
-        }
-        & #campo_problema{
-            margin-right: 16%;
-        }
-    }   
+        justify-content: center;
+    }
+    .campos_medio{
+        display: flex;
+        max-width: 280px;
+        width: 100%;
+        justify-content: center;
+    } 
+    .campos_maior{
+        display: flex;
+        max-width: 335px;
+        width: 100%;
+        justify-content: center;
+    } 
     .inserir_dados{
         margin-bottom: 2.5%;
         padding: 10px;
@@ -140,42 +143,17 @@ body{
             background-color: rgb(59, 24, 166);
         }
     }
-    
-}
 
-@media (min-width: 768px) and (max-width: 1000px) {
-    #centralizar{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        min-height: auto;
+    #email{
+        margin-top: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
     }
-    #centralizada{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #ffffff;
-        width: 100%;
-        height: auto;
-    }
-}
 
-
-@media (min-width:1000px){
-    #centralizar{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        min-height: auto;
+    #botao_email{
+        color: rgb(255, 255, 255);
+        padding: 10px 10px 10px 10px;
+        border-radius: 20px;
+        text-decoration: none;
+        background-color: rgb(56, 21, 160);
     }
-    #centralizada{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #ffffff;
-        width: 100%;
-        height: auto;
-    }
-}
